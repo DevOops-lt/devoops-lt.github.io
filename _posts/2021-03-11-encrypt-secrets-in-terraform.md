@@ -2,7 +2,7 @@
 layout: single
 title:  "Encrypt secrets in Terraform"
 date:   2021-03-11 13:34:56 +0200
-categories: jekyll update
+categories: Jekyll update
 ---
 
 In case you wanted to encrypt a value which should not be seen in source control Terraform allows for encryption in `.tf` and `.tvars` using [RSA + Base64 Encryption](https://www.terraform.io/docs/language/functions/rsadecrypt.html).
@@ -87,7 +87,7 @@ EOT
 }
 ```
 
-First I've pasted my encoded secret in [heredoc](https://www.terraform.io/docs/language/expressions/strings.html#heredoc-strings) format to preserve any new lines that were created for this encoded document, however after testing I realised that this didn't matter much and we can trim new lines and get the same results, so the above can also be writen in single line like this:
+First I've pasted my encoded secret in [heredoc](https://www.terraform.io/docs/language/expressions/strings.html#heredoc-strings) format to preserve any new lines that were created for this encoded document, however after testing I realized that this didn't matter much and we can trim new lines and get the same results, so the above can also be written in single line like this:
 
 ```hcl
 locals {
@@ -96,7 +96,7 @@ locals {
 }
 ```
 
-**EDIT** My collegue suggested that we can get encoded output in single line format by adding a `-A` flag.
+**EDIT** My colleague suggested that we can get encoded output in single line format by adding a `-A` flag.
 
 ```powershell
 PS> openssl enc -a -A -in .\encrypted.txt -out .\encrypted64.txt -none
@@ -152,7 +152,7 @@ Terraform will perform the following actions:
 Plan: 2 to add, 0 to change, 0 to destroy.
 ```
 
-Lastsly `terraform apply -auto-approve`
+Lastly `terraform apply -auto-approve`
 
 ```hcl
 local_file.secret: Creating...
