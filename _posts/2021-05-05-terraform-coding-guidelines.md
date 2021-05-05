@@ -3,6 +3,7 @@ layout: single
 title:  "Terraform coding guidelines"
 date:   2021-05-05 13:20:00 +0200
 categories: Jekyll update
+author: Nilsas Firantas
 ---
 
 ## Terraform code writing practices

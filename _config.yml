@@ -107,30 +107,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Nilsas"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Regular everyday normal guy"
-  location         : "Lithuania"
-  email            : "nilsas@firantas.lt"
+  name: "DevOops.lt"
+  bio: "Just some DevOps-y fun"
+  avatar: "assets/images/devoops.jpg"
+  location: "Lithuania"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:nilsas@firantas.lt"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://devoops.lt"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Nilsas"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
