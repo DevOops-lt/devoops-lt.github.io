@@ -1,0 +1,25 @@
+Default Man:
+  name: "DevOops.lt"
+  bio: "Just some DevOps-y fun"
+  avatar: "assets/images/devoops.jpg"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://devoops.lt"
+
+Nilsas Firantas:
+  name             : "Nilsas Firantas"
+  avatar           :  "/assets/images/nilsas.jpg"
+  bio              : "Regular everyday normal guy"
+  location         : "Lithuania"
+  email            : "nilsas@firantas.lt"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nilsas@firantas.lt"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://devoops.lt"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Nilsas"
