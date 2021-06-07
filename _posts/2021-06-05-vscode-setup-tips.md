@@ -53,3 +53,105 @@ sudo apt install code # or code-insiders
 ```
 
 More information on Linux installation is provided in the [official documentation](https://code.visualstudio.com/docs/setup/linux)
+
+### Configuration
+
+Initialy VSCode does not require any configuration, it's pretty much plug and play.
+However there a few tricks that I always make sure that I have to make my life easier.
+
+#### PowerShell 7+
+
+Yup, I know this is not exactly VSCode setup, 
+but as someone that run Powershell everywhere
+I need to make sure that I have relevant Cross Platform Powershell setup.
+
+`Windows`
+
+```Batchfile
+choco install powershell-core -y
+```
+
+`Mac OS`
+
+```bash
+brew install --cask powershell
+```
+
+`Debian`
+
+```bash
+# Update the list of packages
+sudo apt-get update
+# Install pre-requisite packages.
+sudo apt-get install -y wget apt-transport-https software-properties-common
+# Download the Microsoft repository GPG keys
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+# Update the list of products
+sudo apt-get update
+# Enable the "universe" repositories
+sudo add-apt-repository universe
+# Install PowerShell
+sudo apt-get install -y powershell
+```
+
+**Refrence:** [https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1#installation-via-package-repository---ubuntu-2004](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1#installation-via-package-repository---ubuntu-2004)
+
+This should take care of our integrated terminal.
+After restarting VSCode Powershell 7 should also be your default shell, if that doesn't happen out fo the box
+you can try doing `ctrl+shift+p` start typing `Terminal: Select Default Profile` 
+
+![Select Terminal Profile](./assets/images/terminal-select-01.png)
+
+this should return you a selection of terminal available for you in which you can chose which one do you prefer.
+Here's mine:
+
+![Select Terminal Profile](./assets/images/terminal-select-02.png)
+
+Now that we have Powershell setup I always do like to see some source control information in my shell.
+Thus lets install `posh-git` with
+
+```powershell
+Install-Module -Name "posh-git"
+```
+
+**Note:** you may need to approve NuGet as a package manager if you never installed stuff before via this method.
+
+After the instalation I always want it to start so I'll include it into my PS profile.
+Easy way to find your profile in Powershell
+
+```powershell
+Write-Host $PROFILE
+```
+
+Output should look like this:
+
+```powershell
+"C:\Users\<YOUR USERNAME>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+```
+
+Now if that file does not exist, feel free to create it.
+If it does, open it with your favourite text editor and append the follwing:
+
+```powershell
+Import-Module -Name 'posh-git'
+```
+
+It's unrelated but for conveniance and while we're here, you can also add:
+
+```powershell
+Set-Alias -Name tf -Value terraform
+```
+
+This let's us to use `tf` instead of typing full word `terraform`
+
+```powershell
+tf init && tf plan && tf apply
+```
+
+instead of 
+
+```powershell
+terraform init && terraform plan && terraform apply
+```
