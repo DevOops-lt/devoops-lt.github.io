@@ -155,3 +155,33 @@ instead of
 ```powershell
 terraform init && terraform plan && terraform apply
 ```
+
+#### PSScriptAnalyzer
+
+This one is easy to setup and super useful with real time Static analysis
+
+```powershell
+Install-Module -Name PSScriptAnalyzer
+```
+
+Real-time Static analysis should be enabled by default, but in case it isn't do this:
+`ctrl+shift+p` type `preferences` and find `Preferences: Open Settings (UI)`
+in the settings use the search bar and find the setting by typing `script analysis`
+tick the checkbox if it is not already ticked
+
+![Enable Real Time Analysis](./assets/images/script-analyzer.png)
+
+### Plugins
+
+Some of my favourite plugins
+
+* Hashicorp terraform
+  * Make sure it is published by Hashicorp, it is definately the best plugin for Terraform there is.
+  * Excelent language support, auto-complete, up-to-date
+  * [https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform)
+* ident-rainbow
+  * by `oderwat` [https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+  * makes all your ident clearly visible which helps keeping the code clean and consistant
+
+
+
