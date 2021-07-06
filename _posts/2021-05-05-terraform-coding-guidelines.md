@@ -4,6 +4,7 @@ title:  "Terraform coding guidelines"
 date:   2021-05-05 13:20:00 +0200
 categories: Jekyll update
 author: Nilsas Firantas
+teaser: "/assets/images/Terraform_VerticalLogo_FullColor_RGB.png"
 ---
 
 ## Terraform code writing practices

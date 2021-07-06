@@ -26,7 +26,7 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 locale                   : "en-US"
 title                    : "DevOops"
 title_separator          : "-"
-subtitle                 : "To make a mistake is human, to propogate mistake for all servers automatically is DevOps"
+subtitle                 : " "
 name                     : "DevOops"
 description              : >-
   Blog about cool DevOps things and avoiding the "DevOops" :), we'll talk about DevOps culture,
@@ -37,7 +37,7 @@ description              : >-
 url                      : "https://devoops.lt" # the base hostname & protocol for your site e.g. "https://devoops-lt.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "devoops-lt/devoops-lt" # GitHub username/repo-name e.g. "devoops-lt/devoops-lt"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/christopher-robin-ebbinghaus-unsplash_500x333.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -276,3 +276,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

@@ -4,6 +4,7 @@ title:  "Encrypt secrets in Terraform"
 date:   2021-03-11 13:34:56 +0200
 categories: Jekyll update
 author: Nilsas Firantas
+teaser: "/assets/images/Terraform_VerticalLogo_FullColor_RGB.png"
 ---
 
 In case you wanted to encrypt a value which should not be seen in source control Terraform allows for encryption in `.tf` and `.tvars` using [RSA + Base64 Encryption](https://www.terraform.io/docs/language/functions/rsadecrypt.html).
