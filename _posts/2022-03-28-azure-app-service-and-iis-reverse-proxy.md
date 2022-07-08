@@ -12,18 +12,18 @@ teaser: "/assets/images/app_service_proxy_teaser.png"
 ### General
 
 At some point you might find yourself in a spot needing a quick proxy and think to yourself: "Well cloud has me covered, right?".
-Unfortunatelly that is not quite true, while cloud has a lot of amazing things to offer quick, easy and cheap proxy services are absent.
+Unfortunately that is not quite true, while cloud has a lot of amazing things to offer quick, easy and cheap proxy services are absent.
 This brings me to the current story. I found myself in a situation where I need to whitelist an IP address for Azure Cloud.
-Anyone whos ever had this pleasure already knows where I'm going with this. 
+Anyone who's ever had this pleasure already knows where I'm going with this. 
 Almost all Azure services has some possible IP ranges, some separated by region, some global, some can have 15-ish some close to a thousand possible IP address _ranges_.
-At this point I need to have one to three IP addresses or ranges any more and I consider that not manageble.
+At this point I need to have one to three IP addresses or ranges any more and I consider that not manageable.
 Oh did I mention I'm in a predicament of using Hybrid infrastructure so just whitelisting a Service Tag and calling it a day is not an option.
 To make things harder I'm also not able to whitelist a FQDN, just a plain old CIDR range.
 
 ### Enter Azure App Services
 
 Alright, fixing one issue at a time, I decide to tackle IP whitelisting issue first and I'll get back to routing traffic later.
-Here cloud has us covered all I need to do is deploy a Web App setup Outbound traffic routing and presto it should just habve a single IP that I manage.
+Here cloud has us covered all I need to do is deploy a Web App setup Outbound traffic routing and presto it should just have a single IP that I manage.
 Although it is a bit harder than the previous sentence might have sounded it gets done pretty quickly.
 
 Let's bring out Terraform and do a bit of Infrastructure coding.
@@ -96,7 +96,7 @@ PowerPlatform in this example in one of the most if not the most possible IP ran
 Obviously I didn't count all possible IP addresses in all possible service tags, 
 but if you are interested enough you can download a JSON list with possible Azure IP addresses from [here](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
 
-Lastly there is a `lifecycle` block which ignores `"scm_type"` and this is just a habbit of adding this through the years. 
+Lastly there is a `lifecycle` block which ignores `"scm_type"` and this is just a habit of adding this through the years. 
 If this is not present each time you'd deploy your code to the App Service via Azure DevOps, next time Terraform would be ran it would detect an Infrastructure drift.
 If memory serves me right, Terraform would try to fix this drift, but would throw an error on the first try and only would go through on a second try, which can get real annoying real fast.
 
